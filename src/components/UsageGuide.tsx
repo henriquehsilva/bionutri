@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, Leaf } from 'lucide-react';
+import { Calculator, Leaf, DollarSign } from 'lucide-react';
 
 const UsageGuide: React.FC = () => {
   return (
@@ -48,7 +48,7 @@ const UsageGuide: React.FC = () => {
               </div>
 
               {/* Sugestão de Uso Diário */}
-              <div className="bg-emerald-50 p-4 rounded-lg flex">
+              <div className="bg-emerald-50 p-4 rounded-lg flex mb-6">
                 <Leaf className="w-8 h-8 text-emerald-600 mr-3" />
                 <div>
                   <p className="font-medium text-emerald-800 mb-2">
@@ -70,6 +70,41 @@ const UsageGuide: React.FC = () => {
                     Assim você cobre tudo de forma saudável e prática.
                   </p>
                 </div>
+              </div>
+
+              {/* Tabela de Custo */}
+              <div className="bg-slate-50 p-4 rounded-lg">
+                <div className="flex items-center mb-3">
+                  <DollarSign className="w-6 h-6 text-slate-600 mr-2" />
+                  <p className="font-medium text-slate-700">
+                    Custo para 7 porções de 750g (5,25 kg):
+                  </p>
+                </div>
+                <table className="w-full text-sm text-left text-gray-700">
+                  <thead>
+                    <tr>
+                      <th className="pb-2">Ingrediente</th>
+                      <th className="pb-2">Quantidade</th>
+                      <th className="pb-2">Custo (R$)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Proteína de ervilha</td><td>2,8 kg</td><td>235,34</td></tr>
+                    <tr><td>PVT em pó</td><td>1,4 kg</td><td>50,97</td></tr>
+                    <tr><td>Grão-de-bico cozido</td><td>1,4 kg</td><td>26,56</td></tr>
+                    <tr><td>Sementes de chia</td><td>0,7 kg</td><td>11,91</td></tr>
+                    <tr><td>Sementes de girassol</td><td>0,35 kg</td><td>8,74</td></tr>
+                    <tr><td>Azeite extravirgem</td><td>0,18 L</td><td>20,49</td></tr>
+                  </tbody>
+                  <tfoot>
+                    <tr className="font-bold">
+                      <td>Total</td><td></td><td>R$ 353,01</td>
+                    </tr>
+                    <tr>
+                      <td colSpan={2}>Custo por porção de 750g</td><td>R$ 50,43</td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
 
             </div>

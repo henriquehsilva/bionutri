@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator } from 'lucide-react';
+import { Calculator, Leaf } from 'lucide-react';
 
 const UsageGuide: React.FC = () => {
   return (
@@ -33,12 +33,12 @@ const UsageGuide: React.FC = () => {
                     =
                   </div>
                   <p className="ml-3 text-gray-700">
-                    Consumo de aproximadamente <strong>740g</strong> dessa biomassa para atingir o objetivo.
+                    Consumo de aproximadamente <strong>750g</strong> dessa biomassa para atingir o objetivo.
                   </p>
                 </div>
               </div>
               
-              <div className="bg-amber-50 p-4 rounded-lg">
+              <div className="bg-amber-50 p-4 rounded-lg mb-6">
                 <p className="font-medium text-amber-800">
                   Dica de proporção:
                 </p>
@@ -46,6 +46,32 @@ const UsageGuide: React.FC = () => {
                   Para cada 100g de biomassa, você obtém 31g de proteína, tornando fácil calcular a quantidade necessária para suas metas diárias.
                 </p>
               </div>
+
+              {/* Sugestão de Uso Diário */}
+              <div className="bg-emerald-50 p-4 rounded-lg flex">
+                <Leaf className="w-8 h-8 text-emerald-600 mr-3" />
+                <div>
+                  <p className="font-medium text-emerald-800 mb-2">
+                    🚀 Sugestão de Uso Diário:
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    <strong>750g de biomassa = Proteína resolvida.</strong>
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    <span className="font-medium">Adicione:</span>
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    <li>2 porções de vegetais (ex: brócolis, espinafre, cenoura)</li>
+                    <li>1 fruta (ex: laranja ou kiwi)</li>
+                    <li>Um punhado pequeno de castanhas</li>
+                    <li>Suplementação (<strong>B12</strong> e/ou <strong>ômega-3</strong>)</li>
+                  </ul>
+                  <p className="text-gray-700 mt-3">
+                    Assim você cobre tudo de forma saudável e prática.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
